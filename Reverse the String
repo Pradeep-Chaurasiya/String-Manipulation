@@ -1,0 +1,25 @@
+public class Solution {
+    public String solve(String A) {
+        
+        if(A.length()==1)
+        {
+            return A;
+        }
+        
+       String []arr = A.split(" ");
+
+
+      ArrayList<String> list = new ArrayList<>();
+      for(int i=arr.length-1; i>=0; i--)
+      {
+         if(!arr[i].equals(""))
+         {
+            list.add(arr[i]);
+         }
+
+      }
+      
+     
+      return String.join(" ", list);
+    }
+}
