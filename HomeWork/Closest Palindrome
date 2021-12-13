@@ -1,0 +1,48 @@
+public class Solution {
+    public String solve(String A) {
+        
+        int i = 0;
+        int j = A.length()-1;
+        int count = 0;
+        if(j%2 == 0)
+        {
+          while(i<j)
+          {
+            if(A.charAt(i) != A.charAt(j))
+            {
+                count++;
+            }
+            i++;
+            j--;
+          }
+           if(count > 1)
+           {
+            return "NO";
+           }
+           else
+           return "YES";
+        }
+        
+        if(j%2 !=0)
+        {
+          while(i<j)
+          {
+            if( A.charAt(i) != A.charAt(j))
+            {
+                count++;
+            }
+            i++;
+            j--;
+          }
+           if(count == 1)
+           {
+            return "YES";
+           }
+           else
+           return "NO";
+        }
+        return "NO";
+       
+        
+    }
+}
