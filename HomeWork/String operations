@@ -1,0 +1,31 @@
+public class Solution {
+    public String solve(String A) {
+        A += A;
+        ArrayList<Character> list = new ArrayList<>();
+        
+        for(int i=0; i<A.length(); i++)
+        {
+            if(A.charAt(i)>='A' && A.charAt(i)<='Z')
+            {
+                continue;
+            }
+            else if(A.charAt(i) == 'a' || A.charAt(i) == 'e' || A.charAt(i) == 'i' || A.charAt(i) == 'o' || A.charAt(i) == 'u')
+            {
+                list.add('#');
+            }
+            else
+            {
+                list.add(A.charAt(i));
+            }
+        }
+        
+        StringBuilder sb = new StringBuilder();
+        
+        for(int i=0; i<list.size(); i++)
+        {
+            sb.append(list.get(i));
+        }
+        
+        return sb.toString();
+    }
+}
